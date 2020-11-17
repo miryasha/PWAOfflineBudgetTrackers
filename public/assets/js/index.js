@@ -147,13 +147,13 @@ function sendTransaction(isAdding) {
 document.querySelector("#add-btn").onclick = function() {
   sendTransaction(true);
 };
-
+document.querySelector("#sub-btn").addEventListener("click", function(event) {
+  event.preventDefault();
+  sendTransaction(false);
+});
 document.querySelector("#del-btn").addEventListener("click", function(event) {
   event.preventDefault();
   deletePending();
 });
 
-document.querySelector("#sub-btn").addEventListener("click", function(event) {
-  event.preventDefault();
-  sendTransaction(false);
-});
+
